@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Projects from './Components/Projects';
 import './App.css';
 
 
@@ -28,7 +27,6 @@ class App extends Component {
     return (
       <div className="App">
 			My App
-			<Projects projects={this.state.projects} />
       </div>
     );
   }
