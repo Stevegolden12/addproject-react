@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Projects from './Components/Projects'
+import AddProject from './Components/AddProject'
 
 
 class App extends Component {
@@ -8,26 +9,34 @@ class App extends Component {
 	super();
 		this.state = {
 			projects: [
-				{
-					title: 'Business Website',
-					category: 'Web Design'
-				},
-				{
-					title: 'Social App',
-					category: 'Mobile Development'
-				},
-				{
-					title: 'Ecommerce Shopping Cart',
-					category: 'Web Development'
-				}
+				
 			]
 		}
-	}
+  }
+
+  componentWillMount() {
+    this.setState({
+      projects: [
+        {
+          title: 'Business Website',
+          category: 'Web Design'
+        },
+        {
+          title: 'Social App',
+          category: 'Mobile Development'
+        },
+        {
+          title: 'Ecommerce Shopping Cart',
+          category: 'Web Development'
+        }
+      ]
+    })
+  }
 
   render() {
     return (
       <div className="App">
-			My App
+			<AddProject />
       <Projects projects={this.state.projects}/>
       </div>
     );
