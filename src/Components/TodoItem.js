@@ -12,7 +12,7 @@ class TodoItem extends Component {
 }
 
 TodoItem.propTypes = {
-  todo: PropTypes.Object
+  todo: PropTypes.array
 }
 
 

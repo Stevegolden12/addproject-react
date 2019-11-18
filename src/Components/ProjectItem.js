@@ -15,7 +15,7 @@ class ProjectItem extends Component {
 }
 
 ProjectItem.propTypes = {
-  project: PropTypes.Object,
+  project: PropTypes.array,
   onDelete: PropTypes.func
 }
 
